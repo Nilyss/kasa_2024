@@ -1,0 +1,24 @@
+@use '../../utils/styles/variables' as vars;
+@use '../../utils/styles/mixins' as mixins;
+
+.cardWrapper {
+  margin-top: 43px;
+  padding-top: 56px;
+  padding-bottom: 43px;
+  margin-bottom: 50px;
+  border-radius: 25px;
+  min-height: 62.3dvh;
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  background: #f6f6f6;
+
+  @media (max-width: vars.$mobileWidth) {
+    padding-top: unset;
+    margin-top: 22px;
+    background: unset;
+    gap: 20px;
+  }
+}

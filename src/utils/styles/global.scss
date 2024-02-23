@@ -1,5 +1,6 @@
 /* reset.scss */
 @use '../../utils/styles/mixins' as mixins;
+@use '../../utils/styles/variables' as vars;
 
 /* Box sizing rules */
 *,
@@ -31,10 +32,6 @@ dd {
 }
 
 /* Set core body defaults */
-html {
-  background: #f2f2f2;
-}
-
 body {
   margin: auto;
   scroll-behavior: smooth;
@@ -44,9 +41,18 @@ body {
 }
 
 header,
-main,
-footer {
+main {
   @include mixins.desktopBody;
+}
+
+main {
+  flex-flow: column;
+  padding-top: 50px;
+  min-height: 62.3dvh;
+
+  @media (max-width: vars.$mobileWidth) {
+    padding-top: 27px;
+  }
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */

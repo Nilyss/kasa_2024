@@ -47,16 +47,14 @@ function App(): ReactElement {
   return (
     <Router>
       <Header />
-      <main>
-        <Routes>
-          <Route path={'/'} element={<Navigate to={'/home'} />}></Route>
-          <Route path="*" element={<Navigate to={'/404'} />} />
-          <Route path={'/home'} element={<Home />}></Route>
-          <Route path={'/housing/:id'} element={<Housing />}></Route>
-          <Route path={'/about'} element={<About />}></Route>
-          <Route path={'/404'} element={<ErrorLayout />}></Route>
-        </Routes>
-      </main>
+      <Routes>
+        <Route path={'/'} element={<Navigate to={'/home'} />}></Route>
+        <Route path="*" element={<Navigate to={'/404'} />} />
+        <Route path={'/home'} element={<Home />}></Route>
+        <Route path={'/housing/:id'} element={<Housing />}></Route>
+        <Route path={'/about'} element={<About />}></Route>
+        <Route path={'/404'} element={<ErrorLayout />}></Route>
+      </Routes>
       <Footer />
     </Router>
   )
