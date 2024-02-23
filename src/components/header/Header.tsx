@@ -1,21 +1,43 @@
+// styles
+import './header.scss'
+
 // types
 import { ReactElement } from 'react'
-import { HousingType } from '../../utils/types/HousingType.ts'
+import kasaLogo from '../../assets/pictures/kasa_logo.png'
 
-export default function Header(props: { data: HousingType[] }): ReactElement {
-  const logements: HousingType[] = props['data']
+// hooks
+import { Link, NavLink } from 'react-router-dom'
 
+export default function Header(): ReactElement {
   return (
     <header>
-      <h1>Header</h1>
-
-      {logements && (
-        <ul>
-          {logements.map((logement) => (
-            <li key={logement.id}>{logement.title}</li>
-          ))}
-        </ul>
-      )}
+      <nav>
+        <div className={'leftSide'}>
+          <Link to={'/'}>
+            <figure>
+              <img src={kasaLogo} alt="kasa logo" />
+            </figure>
+          </Link>
+        </div>
+        <div className={'rightSide'}>
+          <NavLink
+            to={'/home'}
+            className={({ isActive }: { isActive: boolean }): string =>
+              isActive ? 'activeLink' : ''
+            }
+          >
+            Accueil
+          </NavLink>
+          <NavLink
+            to={'/about'}
+            className={({ isActive }: { isActive: boolean }): string =>
+              isActive ? 'activeLink' : ''
+            }
+          >
+            A Propos
+          </NavLink>
+        </div>
+      </nav>
     </header>
   )
 }

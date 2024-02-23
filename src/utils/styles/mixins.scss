@@ -1,1 +1,8 @@
-@use "./variables" as vars;
+@use './variables' as vars;
+
+@mixin desktopBody() {
+  max-width: vars.$desktopWidth;
+  background: #ffffff;
+  margin: 0 auto;
+  display: flex;
+}

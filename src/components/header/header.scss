@@ -1,2 +1,44 @@
 @use '../../utils/styles/variables' as vars;
-@use "../../utils/styles/mixins" as mixins;
+@use '../../utils/styles/mixins' as mixins;
+
+header {
+  padding-top: 45px;
+}
+
+header nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav figure {
+  width: 210px;
+
+  @media (max-width: vars.$mobileWidth) {
+    width: 145px;
+  }
+}
+
+header nav div {
+  display: flex;
+  gap: 3.56em;
+  font-size: 24px;
+
+  @media (max-width: vars.$mobileWidth) {
+    font-size: 12px;
+  }
+}
+
+header a {
+  color: vars.$fontColor;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: 2px underline vars.$fontColor;
+  }
+}
+
+.activeLink {
+  text-decoration: underline;
+}
