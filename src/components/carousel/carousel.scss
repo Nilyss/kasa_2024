@@ -1,0 +1,40 @@
+.carousel {
+}
+
+.carousel figure {
+  position: relative;
+  width: 1240px;
+  max-height: 415px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.carousel figure img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 415px;
+}
+
+.previous,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.previous img,
+.next img {
+  width: 46.6px;
+  height: 79px;
+}
+
+.previous {
+  left: 105px;
+}
+
+.next {
+  right: 105px;
+}

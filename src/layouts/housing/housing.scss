@@ -1,2 +1,70 @@
 @use '../../utils/styles/variables' as vars;
 @use '../../utils/styles/mixins' as mixins;
+
+.housing article {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.housing article section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.housing .titleWrapper {
+  width: 70%;
+}
+
+.housing h1 {
+  color: vars.$brandingColor;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 51.33px;
+}
+
+.housing p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25.66px;
+}
+
+.housing .hostWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.housing .hostWrapper .hostName p {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  font-size: 18px;
+  line-height: 25.66px;
+  color: vars.$brandingColor;
+  text-transform: capitalize;
+}
+
+.housing .hostWrapper figure {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.tagsAndRatingContainer {
+  margin-top: 21px;
+}
+
+.tagsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.collapseWrapper {
+  margin-top: 26px;
+  margin-bottom: 50px;
+  gap: 76px;
+}

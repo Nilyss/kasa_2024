@@ -1,0 +1,17 @@
+@use '../../utils/styles/variables' as vars;
+
+.tag {
+  min-width: 115px;
+  height: 25px;
+  background: vars.$brandingColor;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.tag span {
+  padding: 0 22px 0 22px;
+  color: vars.$fontColor--alt;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}

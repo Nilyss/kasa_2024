@@ -29,8 +29,6 @@ export default function Home(): ReactElement {
 
   const { housing }: IHousingContextType = useContext(HousingContext)
 
-  console.log(housing)
-
   return (
     <main className={'homeMain'}>
       <Banner datas={bannerDatas} />
