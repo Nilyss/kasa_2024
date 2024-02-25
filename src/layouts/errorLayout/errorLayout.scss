@@ -1,0 +1,31 @@
+@use '../../utils/styles/variables' as vars;
+
+.errorPage {
+  margin-top: 139px;
+  margin-bottom: 139px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 139px;
+}
+
+.errorPage figure {
+  width: 597px;
+  height: 263px;
+}
+
+.errorPage h1 {
+  color: vars.$brandingColor;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 51.33px;
+}
+
+.errorPage a {
+  color: vars.$fontColor;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25.6px;
+  text-decoration: underline;
+}

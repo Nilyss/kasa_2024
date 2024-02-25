@@ -17,6 +17,12 @@ export class APICalls implements IAPICalls {
     ? 'https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P9+React+1'
     : 'https://nilyss.github.io/Kasa_datas'
 
+  /**
+   * An asynchronous function to make a request to the specified endpoint and return the response data.
+   *
+   * @param {string} endpoint - the endpoint to make the request to
+   * @return {Promise<HousingType[]>} a promise that resolves to the response data
+   */
   async getRequest(endpoint: string): Promise<HousingType[]> {
     try {
       return await fetch(this.url + endpoint)

@@ -1,8 +1,11 @@
 @use '../../utils/styles/variables' as vars;
-@use '../../utils/styles/mixins' as mixins;
 
 header {
   padding-top: 45px;
+
+  @media (max-width: vars.$mobileWidth) {
+    padding-top: 20px;
+  }
 }
 
 header nav {
@@ -27,6 +30,7 @@ header nav div {
 
   @media (max-width: vars.$mobileWidth) {
     font-size: 12px;
+    text-transform: uppercase;
   }
 }
 

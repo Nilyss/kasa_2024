@@ -1,0 +1,43 @@
+@use '../../utils/styles/variables' as vars;
+@use '../../utils/styles/mixins' as mixins;
+
+.collapse {
+  display: flex;
+  flex-flow: column;
+  width: 1023px;
+}
+
+.collapse__title {
+  padding: 10px 20px 10px 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: vars.$brandingColor;
+  cursor: pointer;
+}
+
+.collapse__title h2 {
+  color: vars.$fontColor--alt;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25.6px;
+}
+
+.collapse__content {
+  border-radius: 10px 10px 5px 5px;
+  background: vars.$collapseBackground;
+  overflow: hidden;
+  transition: max-height 300ms;
+}
+
+.collapse__content__wrapper {
+  padding: 25px 28px 20px 20px;
+}
+
+.collapse__content p {
+  color: vars.$fontColor;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25.5px;
+}

@@ -3,7 +3,9 @@ import './header.scss'
 
 // types
 import { ReactElement } from 'react'
-import kasaLogo from '../../assets/pictures/kasa_logo.png'
+
+// images
+import kasaLogo from '../../assets/pictures/kasa_logo.webp'
 
 // hooks
 import { Link, NavLink } from 'react-router-dom'
