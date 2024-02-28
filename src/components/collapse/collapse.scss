@@ -41,3 +41,13 @@
   font-weight: 400;
   line-height: 25.5px;
 }
+
+.rotate {
+  transform: rotate(-180deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.reverse {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease-in-out;
+}
