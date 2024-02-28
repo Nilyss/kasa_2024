@@ -15,7 +15,7 @@ export default function Header(): ReactElement {
     <header>
       <nav>
         <div className={'leftSide'}>
-          <Link to={'/'}>
+          <Link to={'/home'}>
             <figure>
               <img src={kasaLogo} alt="kasa logo" />
             </figure>

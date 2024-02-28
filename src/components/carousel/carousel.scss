@@ -1,8 +1,10 @@
+@use '../../utils/styles/variables' as vars;
+
 .carousel {
+  position: relative;
 }
 
 .carousel figure {
-  position: relative;
   width: 1240px;
   max-height: 415px;
   overflow: hidden;
@@ -32,9 +34,21 @@
 }
 
 .previous {
-  left: 105px;
+  left: 23.36px;
 }
 
 .next {
-  right: 105px;
+  right: 23.36px;
+}
+
+.carousel div {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: vars.$fontColor--alt;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25.66px;
 }
