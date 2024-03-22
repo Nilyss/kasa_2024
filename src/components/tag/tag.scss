@@ -6,6 +6,11 @@
   background: vars.$brandingColor;
   border-radius: 10px;
   text-align: center;
+
+  @media (max-width: vars.$mobileWidth) {
+    min-width: 84px;
+    height: 29px;
+  }
 }
 
 .tag span {
@@ -14,4 +19,10 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
+
+  @media (max-width: vars.$mobileWidth) {
+    padding: 0 2px 0 2px;
+    font-size: 10px;
+    line-height: unset;
+  }
 }

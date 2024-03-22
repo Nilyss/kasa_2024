@@ -1,0 +1,30 @@
+@use '../../utils/styles/variables' as vars;
+
+
+.hostWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  @media (max-width: vars.$mobileWidth) {
+      margin-top: 16px;
+  }
+}
+
+.hostWrapper .hostName p {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  font-size: 18px;
+  line-height: 25.66px;
+  color: vars.$brandingColor;
+  text-transform: capitalize;
+}
+
+.hostWrapper figure {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+}

@@ -4,7 +4,8 @@
 .collapse {
   display: flex;
   flex-flow: column;
-  width: 1023px;
+  max-width: 1023px;
+  width: 100%;
 }
 
 .collapse__title {
@@ -22,6 +23,17 @@
   font-size: 18px;
   font-weight: 700;
   line-height: 25.6px;
+
+  @media (max-width: vars.$mobileWidth) {
+    font-size: 13px;
+  }
+}
+
+.collapse__title img {
+  @media (max-width: vars.$mobileWidth) {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 .collapse__content {
@@ -40,6 +52,10 @@
   font-size: 18px;
   font-weight: 400;
   line-height: 25.5px;
+
+  @media (max-width: vars.$mobileWidth) {
+    font-size: 12px;
+  }
 }
 
 .rotate {
