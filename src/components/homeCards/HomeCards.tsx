@@ -3,7 +3,7 @@ import { ReactElement } from 'react'
 import { HousingType } from '../../utils/types/HousingType.ts'
 
 // styles
-import './homecards.scss'
+import './homeCards.scss'
 
 // hooks
 import { Link } from 'react-router-dom'

@@ -19,6 +19,7 @@ import ErrorLayout from './layouts/errorLayout/ErrorLayout'
 // component
 import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
+import Loader from './components/loader/Loader.tsx'
 
 // context
 import { HousingContext } from './context/HousingContext'
@@ -27,7 +28,8 @@ import { HousingContext } from './context/HousingContext'
 import { useEffect, useContext } from 'react'
 
 function App(): ReactElement {
-  const { getHousing }: IHousingContextType = useContext(HousingContext)
+  const { getHousing, isLoading }: IHousingContextType =
+    useContext(HousingContext)
   const getLocalTime = () => {
     const now: Date = new Date()
     return now.toLocaleTimeString()
@@ -47,15 +49,21 @@ function App(): ReactElement {
   return (
     <Router>
       <Header />
-      <Routes>
-        <Route path={'/'} element={<Navigate to={'/home'} />}></Route>
-        <Route path="*" element={<Navigate to={'/404'} />} />
-        <Route path={'/home'} element={<Home />}></Route>
-        <Route path={'/housing/:id'} element={<Housing />}></Route>
-        <Route path={'/about'} element={<About />}></Route>
-        <Route path={'/404'} element={<ErrorLayout />}></Route>
-      </Routes>
-      <Footer />
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <>
+          <Routes>
+            <Route path={'/'} element={<Navigate to={'/home'} />}></Route>
+            <Route path="*" element={<Navigate to={'/404'} />} />
+            <Route path={'/home'} element={<Home />}></Route>
+            <Route path={'/housing/:id'} element={<Housing />}></Route>
+            <Route path={'/about'} element={<About />}></Route>
+            <Route path={'/404'} element={<ErrorLayout />}></Route>
+          </Routes>
+          <Footer />
+        </>
+      )}
     </Router>
   )
 }

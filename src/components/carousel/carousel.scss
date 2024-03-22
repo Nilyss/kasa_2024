@@ -1,18 +1,32 @@
+@use '../../utils/styles/variables' as vars;
+
 .carousel {
+  position: relative;
+  overflow: hidden;
+
+  @media (min-width: vars.$mobileWidth) {
+    width: 100%;
+  }
 }
 
 .carousel figure {
-  position: relative;
-  width: 1240px;
+  max-width: 1240px;
   max-height: 415px;
   overflow: hidden;
   border-radius: 25px;
-}
+
+  @media (max-width: vars.$mobileWidth) {
+      height: 255px;
+  }
+  }
 
 .carousel figure img {
   width: 100%;
   object-fit: cover;
   max-height: 415px;
+  @media (max-width: vars.$mobileWidth) {
+    min-height: 255px;
+  }
 }
 
 .previous,
@@ -29,12 +43,28 @@
 .next img {
   width: 46.6px;
   height: 79px;
+
+  @media (max-width: vars.$mobileWidth) {
+      width: 24px;
+  }
 }
 
 .previous {
-  left: 105px;
+  left: 23.36px;
 }
 
 .next {
-  right: 105px;
+  right: 23.36px;
+}
+
+.carousel div {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: vars.$fontColor--alt;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25.66px;
 }

@@ -11,60 +11,69 @@
   justify-content: space-between;
 }
 
-.housing .titleWrapper {
-  width: 70%;
-}
-
 .housing h1 {
   color: vars.$brandingColor;
   font-size: 36px;
   font-weight: 500;
   line-height: 51.33px;
+
+  @media (max-width: vars.$mobileWidth) {
+    font-size: 18px;
+    line-height: 25.66px;
+    width: 325px;
+  }
 }
 
 .housing p {
   font-size: 18px;
   font-weight: 500;
   line-height: 25.66px;
-}
 
-.housing .hostWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.housing .hostWrapper .hostName p {
-  display: flex;
-  flex-flow: column;
-  align-items: flex-end;
-  font-size: 18px;
-  line-height: 25.66px;
-  color: vars.$brandingColor;
-  text-transform: capitalize;
-}
-
-.housing .hostWrapper figure {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  overflow: hidden;
+  @media (max-width: vars.$mobileWidth) {
+    font-size: 14px;
+    line-height: 19.07px;
+    margin-top: 5px;
+  }
 }
 
 .tagsAndRatingContainer {
   margin-top: 21px;
+  @media (max-width: vars.$mobileWidth) {
+    display: flex;
+    flex-flow: column;
+  }
+}
+
+.tagsAndRatingContainer__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  @media (max-width: vars.$mobileWidth) {
+    flex-flow: wrap;
+  }
 }
 
 .tagsWrapper {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
   gap: 10px;
+
+  @media (max-width: vars.$mobileWidth) {
+    justify-content: flex-start;
+    width: 100%;
+  }
 }
 
 .collapseWrapper {
   margin-top: 26px;
   margin-bottom: 50px;
   gap: 76px;
+
+  @media (max-width: vars.$mobileWidth) {
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+  }
 }

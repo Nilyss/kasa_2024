@@ -37,6 +37,8 @@ export default function Carousel(props: { datas: HousingType }): ReactElement {
     }
   }
 
+  const length: number = pictures && pictures.length
+
   return (
     <div className={'carousel'}>
       <figure>
@@ -44,12 +46,19 @@ export default function Carousel(props: { datas: HousingType }): ReactElement {
           <img src={pictures[currentIndex]} alt={props.datas.title} />
         )}
       </figure>
-      <button className={'previous'} onClick={previousSlide}>
-        <img src={leftArrow} alt={'chevron'} />
-      </button>
-      <button className={'next'} onClick={nextSlide}>
-        <img src={rightArrow} alt={'chevron'} />
-      </button>
+      {length > 1 && (
+        <>
+          <button className={'previous'} onClick={previousSlide}>
+            <img src={leftArrow} alt={'chevron'} />
+          </button>
+          <button className={'next'} onClick={nextSlide}>
+            <img src={rightArrow} alt={'chevron'} />
+          </button>
+          <div>
+            {currentIndex + 1}/{length}
+          </div>
+        </>
+      )}
     </div>
   )
 }

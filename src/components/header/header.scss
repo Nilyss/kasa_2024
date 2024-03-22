@@ -18,6 +18,10 @@ header nav {
 header nav figure {
   width: 210px;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   @media (max-width: vars.$mobileWidth) {
     width: 145px;
   }

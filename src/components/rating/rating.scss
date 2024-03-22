@@ -1,5 +1,14 @@
+@use '../../utils/styles/variables' as vars;
+
 .rating {
   display: flex;
+  justify-content: flex-end;
+  width: 100%;
+
+  @media (max-width: vars.$mobileWidth) {
+    justify-content: flex-start;
+    width: unset;
+  }
 }
 
 .rating img {

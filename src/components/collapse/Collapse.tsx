@@ -15,7 +15,6 @@ import { useState, useEffect } from 'react'
 
 // icons
 import arrowUp from '../../assets/icons/arrowUp.webp'
-import arrowDown from '../../assets/icons/arrowDown.webp'
 
 export default function Collapse(props: {
   title: string
@@ -44,11 +43,11 @@ export default function Collapse(props: {
       <div className={'collapse__title'} onClick={toggleIsOpen}>
         <h2>{props.title}</h2>
         <span>
-          {isOpen ? (
-            <img src={arrowDown} alt={'arrow up'} />
-          ) : (
-            <img src={arrowUp} alt={'arrow down'} />
-          )}
+          <img
+            src={arrowUp}
+            alt={isOpen ? 'arrow down' : 'arrow up'}
+            className={isOpen ? 'rotate' : 'reverse'}
+          />
         </span>
       </div>
       <div
